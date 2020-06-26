@@ -145,6 +145,7 @@ header {
 }
 .features-list {
   display: flex;
+  justify-content: center;
 }
 .features-item {
   font-size: 14px;
@@ -178,6 +179,7 @@ header {
 }
 .job-list {
   display: flex;
+  justify-content: center;
   margin-top: 50px;
 }
 .job-list li:not(:last-child) {
