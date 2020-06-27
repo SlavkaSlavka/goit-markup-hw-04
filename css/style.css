@@ -127,6 +127,7 @@ header {
   margin-top: 30px;
   border: 1px solid transparent;
   border-radius: 4px;
+  cursor: pointer;
 }
 .galery {
   background-image: linear-gradient(
@@ -253,13 +254,15 @@ header {
 .icon-list {
   width: 270px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding-right: 30px;
   padding-left: 30px;
   text-align: center;
 }
 .icon-list li {
   width: 44px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 .icon-list li:not(:last-child) {
   margin-right: 10px;
@@ -272,7 +275,9 @@ header {
   margin-bottom: 10px;
 }
 .team-icon {
-  color: #afb1b8;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   line-height: 44px;
 }
 
@@ -345,6 +350,7 @@ header {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  text-align: center;
 }
 .footer-icon:hover,
 .footer-icon:focus {
@@ -527,8 +533,8 @@ svg {
   background-size: contain;
   width: 15px;
   height: 10px;
-  fill: #2196f3;
-  outline: #2196f3;
+  outline: 1px solid #2196f3;
+  fill: currentColor;
 }
 
 .link-2::before {
@@ -554,6 +560,46 @@ svg {
   height: 15px;
   fill: var(--akcent-color);
 }
+
+.our-icon {
+  fill: #afb1b8;
+  width: 20px;
+  height: 20px;
+}
+.icon-list li:hover {
+  background-color: var(--akcent-color);
+  border-radius: 50%;
+}
+.icon-list li:hover svg {
+  fill: white;
+}
+.brends-icon {
+  height: 45px;
+  fill: #afb1b8;
+}
+.brends-list li:hover svg {
+  fill: var(--akcent-color);
+}
+.brends-list li:hover {
+  border-color: var(--akcent-color);
+}
+.footer-icon {
+  fill: white;
+  width: 20px;
+  height: 20px;
+}
+.footer-icon-list li {
+  display: inline-flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-icon-list li:hover {
+  background-color: var(--akcent-color);
+}
+
 /*основной текст color: #212121; */
 /* цвет текста color: #757575; */
 /* цвет лого color: #000000;*/
