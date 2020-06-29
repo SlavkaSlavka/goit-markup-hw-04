@@ -64,9 +64,9 @@ img {
   letter-spacing: 0.02em;
 }
 
-.site-nav-link:hover,
-.site-nav-link:focus,
-.site-nav-link:active {
+.site-nav li:hover a,
+.site-nav a:focus,
+.site-nav a:active {
   color: var(--akcent-color);
 }
 .main {
@@ -259,11 +259,7 @@ header {
   padding-left: 30px;
   text-align: center;
 }
-.icon-list li {
-  width: 44px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-}
+
 .icon-list li:not(:last-child) {
   margin-right: 10px;
 }
@@ -279,6 +275,8 @@ header {
   justify-content: center;
   align-items: center;
   line-height: 44px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .team-list li img {
@@ -299,7 +297,7 @@ header {
   margin-top: 50px;
   display: flex;
 }
-.brends-list li {
+.brends-list a {
   width: 170px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -356,6 +354,7 @@ header {
 .footer-icon:focus {
   background-color: var(--akcent-color);
   color: var(--help-color);
+  outline: transparent;
 }
 address .main-footer-list li {
   display: block;
@@ -501,64 +500,16 @@ address .main-footer-list li:not(:last-child) {
 }
 
 .border {
+  cursor: pointer;
   padding-bottom: 20px;
   padding-top: 20px;
   background: #ffffff;
   border: 1px solid #eeeeee;
   box-sizing: border-box;
+}
+.card-list:hover .border {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
-}
-svg {
-  fill: currentColor;
-}
-.link-1::before {
-  content: '';
-  display: inline-flex;
-  margin-right: 10px;
-  background-image: url('../img/envelope.svg');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 15px;
-  height: 10px;
-}
-.link-1:hover::before {
-  content: '';
-  display: inline-flex;
-  margin-right: 10px;
-  background-image: url('../img/envelope.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 15px;
-  height: 10px;
-  outline: 1px solid #2196f3;
-  fill: currentColor;
-}
-
-.link-2::before {
-  content: '';
-  display: inline-flex;
-  margin-right: 10px;
-  background-image: url('../img/smartphone.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 10px;
-  height: 15px;
-}
-.link-2:hover::before {
-  content: '';
-  display: inline-flex;
-  margin-right: 10px;
-  background-image: url('../img/smartphone.svg');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 10px;
-  height: 15px;
-  fill: var(--akcent-color);
 }
 
 .our-icon {
@@ -566,38 +517,76 @@ svg {
   width: 20px;
   height: 20px;
 }
-.icon-list li:hover {
+.icon-list a:hover,
+.icon-list a:focus {
   background-color: var(--akcent-color);
   border-radius: 50%;
+  outline: transparent;
 }
-.icon-list li:hover svg {
+.icon-list a:hover svg,
+.icon-list a:focus svg {
   fill: white;
+}
+
+.icon-list a {
+  padding: 10px;
 }
 .brends-icon {
   height: 45px;
   fill: #afb1b8;
 }
-.brends-list li:hover svg {
+.brends-list a:hover svg {
   fill: var(--akcent-color);
 }
-.brends-list li:hover {
+.brends-list a:hover,
+.brends-list a:focus {
   border-color: var(--akcent-color);
+  outline: transparent;
 }
-.footer-icon {
+.brends-list a:focus svg {
+  fill: var(--akcent-color);
+}
+.footer-icons {
   fill: white;
   width: 20px;
   height: 20px;
 }
 .footer-icon-list li {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  align-items: center;
+}
+.footer-icon-list li a:hover,
+.footer-icon-list li a:focus {
+  background-color: var(--akcent-color);
+  outline: transparent;
+}
+.footer-icon {
+  display: flex;
+  align-items: center;
+  padding: 10px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
 }
-.footer-icon-list li:hover {
-  background-color: var(--akcent-color);
+.contacts-list li {
+  display: inline-flex;
+  align-items: baseline;
+}
+.envelope {
+  width: 15px;
+  height: 10px;
+  margin-right: 10px;
+}
+.smartphone {
+  width: 10px;
+  height: 15px;
+  margin-right: 10px;
+}
+.contacts-list li:hover svg {
+  fill: var(--akcent-color);
+}
+.contacts-list a:focus svg {
+  fill: var(--akcent-color);
 }
 
 /*основной текст color: #212121; */
