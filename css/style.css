@@ -500,14 +500,22 @@ address .main-footer-list li:not(:last-child) {
 }
 
 .border {
+  display: block;
   cursor: pointer;
   padding-bottom: 20px;
   padding-top: 20px;
   background: #ffffff;
   border: 1px solid #eeeeee;
   box-sizing: border-box;
+  outline: transparent;
+  text-decoration: none;
+  list-style: none;
 }
-.card-list:hover .border {
+.border h2 {
+  color: #212121;
+}
+.card-list li:hover .border,
+.card-list a:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
